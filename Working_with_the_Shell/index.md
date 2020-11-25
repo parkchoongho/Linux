@@ -33,3 +33,22 @@
  1438  vi rand.c
  1444  gcc rand.c
 ```
+## Bash Environment Variables
+```bash
+~ ❯❯❯ echo $SHELL
+/bin/zsh
+```
+$을 붙이면 해당 환경 변수를 불러올 수 있음
+```bash
+~ ❯❯❯ env
+HOME=/Users/choonghopark
+LOGNAME=choonghopark
+```
+env를 입력하면 환경변수들을 가져울 수 있음
+```bash
+~ ❯❯❯ export OFFICE=parkchoongho
+```
+환경변수에 새로운 값을 할당하려면 `export` 명령어를 사용 그런데 이렇게 변수를 사용하는 것은 해당 쉘에서만 사용하기 때문에 계속해서 사용하기 위해서는 `~/.profile`이나 `/.pam_environment`에 추가해야함. 추가하는 방식은 아래와 같이 함
+```bash
+~ >>> echo 'export OFFICE=parkchoongho' >> ~/.profile
+```
